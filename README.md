@@ -3,21 +3,44 @@
 A detailed study of on disk-based (_MySQL, MongoDB_) and in-memory database (_Redis_) systems to analyze and evaluate thier performance on various constraints. Recorded and displayed the findings, and provided our inference from the data. 
 
 # MongoDB
-choose the pipeline from pipelines.py to be executed and change the collection name according to the pipeline 
-2. update query is on a separate updateQuery.py file
+### Step 1 - Download and install MongoDB Community edition
+Download it from here - https://www.mongodb.com/try/download/community
 
-### Collection names for pipelines
+### Step 2 - Download and install MongoDB Compass
+Download it from - https://www.mongodb.com/try/download/compass
 
-titleCrew:
-Pipeline 1 ,
+### Step 3 - Import Dataset 
+Download the dataset and import different tables into MongoDB Collections.
+
+### Step 4 - Prepare Queries
+Identify and prepare queries for different operations like Selection, Aggregation, Updation, Deletion.
+
+### Step 5 - Index Identification
+Identify Column Indices  for faster execution of queries.<br>
+Identified indices for the queries executed in our projects were :<br>
+  Indices were created on fields - **titleType, tconst, parentTconst** for Collection **titleType**.<br>
+  Indices were created on fields - **tconst, directors** for Collection **titleCrew**.<br>
+  Indices were created on fields - **nconst, primaryProfession** for Collection **nameBasics**.<br>
+  Index was created on field - **tconst** for Collection **titleRating**.<br>
+  Compound indices were created on fields - **titleType & startyear, titleType & runtimeMinutes** for Collection **titleType**
+  
+### Step 6 - Pipeline Execution
+Pipelines are separated in a field named pipelines.py.<br>
+Changing the pipeline variable name in main.py would help in executing the required pipeline.<br>
+Update query pipeline is isolated on a separate file named updateQuery.py <br>
+
+#### Collection names to be used while executing pipelines
+
+**titleCrew:**
+Pipeline 1,<br>
 Pipeline 5
 
-titleBasics:
-Pipeline 3,
-Pipeline 4,
-Pipeline 6,
-Pipeline 7,
-Pipeline 8,
+**titleBasics:**
+Pipeline 3,<br>
+Pipeline 4,<br>
+Pipeline 6,<br>
+Pipeline 7,<br>
+Pipeline 8,<br>
 Pipeline 9
 
 # MySql
@@ -78,12 +101,12 @@ Runtime for the implemented approaches will be printed at the end of each python
 
 ### Entire Team
 1. Contributed to dataset shortlisting 
-2. Contributed on the dataset limitation discussions.
-3. Contributed on research of each database technology chosen.
-4. Query preparation - Total 9 queries - 3 queries/person
-5. Preparation of powerpoint slides
-6. Presenatation and demo
-7. Report writing
+2. Contributed to the dataset limitation discussions.
+3. Contributed to the research of each database technology chosen.
+4. Query preparation - Total 9 queries - 3 queries/person.
+5. Preparation of power point slides.
+6. Presenatation and demo.
+7. Report writing.
 
 ### Sujith Kumaar - Redis module
 1. Formatted dataset to .redis format to load the data
@@ -91,7 +114,10 @@ Runtime for the implemented approaches will be printed at the end of each python
 3. Designed to data model to use with Redis and came up with the relevant data structures
 4. Implemented pure python scripts, redis pipelining scripts and lua scripts for all the 9 queries
 
-### Surya - MongoDB module   
-
+### SuryaKangeyan - MongoDB module   
+1. Imported entire dataset to IMDB database using MongoDB Compass.
+2. Carried out research on python scripts for generating pipelines.
+3. Designed implemented and modified python pipelines for the above mentioned queries.
+4. Identified appropriate indices to make query evaluation faster.
 
 ### Vrushali - MongoDB module  
