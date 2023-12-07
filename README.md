@@ -12,7 +12,7 @@ The imdb-load-data.sql is used to load the tsv files in the schema.
 Set up file - Format to transform the data and load it to Redis
 Query files 1 to 9 --> Execution of queries
 
-All Queries:
+# All Queries:
 1. Retrieve movie titles along with their directors' names.
 2. Calculate the average runtime of movies by directors' professions.
 3. Retrieve movie titles released in a specific year and genre
