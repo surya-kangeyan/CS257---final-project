@@ -2,3 +2,9 @@
 Codebase for MySql,MongoDB,Redis queries 
 # MongoDB
 choose the pipeline from pipelines.py to be executed and change the collection name according to the pipeline 
+
+
+
+# Redis
+Set up file - Format to transform the data and load it to Redis
+Query files 1 to 9 --> Execution of queries
