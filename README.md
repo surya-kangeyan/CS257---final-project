@@ -33,6 +33,7 @@ Download it from here - https://redis.io/download/
 ### Step 2 - Prepare .redis files to load data on Redis server
 Use the code in the setupData.py to obtain .redis data file. <br>
 For simplicity, we are attaching the .redis files we have used to load the data. <br>
+Find it here -> https://drive.google.com/drive/folders/1YFCtkPF2GWWwV2I373IRB1DCBIz1laVv?usp=sharing <br>
 <br>
 To load data on Redis server, use the command -> _redis-cli -h localhost -p 6379 < pathToFile/file_name.redis_
 
