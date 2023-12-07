@@ -2,6 +2,20 @@
 Codebase for MySql,MongoDB,Redis queries 
 # MongoDB
 choose the pipeline from pipelines.py to be executed and change the collection name according to the pipeline 
+2. update query is on a separate updateQuery.py file
+# Collection names for pipelines
+
+titleCrew:
+Pipeline 1 
+Pipeline 5
+
+titleBasics:
+Pipeline 3
+Pipeline 4
+Pipeline 6
+Pipeline 7
+Pipeline 8
+Pipeline 9
 
 # MySql
 All the .sql files are used for setting up the Mysql tables.
