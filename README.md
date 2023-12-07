@@ -6,15 +6,15 @@ choose the pipeline from pipelines.py to be executed and change the collection n
 # Collection names for pipelines
 
 titleCrew:
-Pipeline 1 
+Pipeline 1 ,
 Pipeline 5
 
 titleBasics:
-Pipeline 3
-Pipeline 4
-Pipeline 6
-Pipeline 7
-Pipeline 8
+Pipeline 3,
+Pipeline 4,
+Pipeline 6,
+Pipeline 7,
+Pipeline 8,
 Pipeline 9
 
 # MySql
