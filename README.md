@@ -18,11 +18,11 @@ Identify and prepare queries for different operations like Selection, Aggregatio
 ### Step 5 - Index Identification
 Identify Column Indices  for faster execution of queries.<br>
 Identified indices for the queries executed in our projects were :<br>
- *Tabspace* Indices were created on fields - **titleType, tconst, parentTconst** for Collection **titleType**.<br>
- *Tabspace* Indices were created on fields - **tconst, directors** for Collection **titleCrew**.<br>
-  *Tabspace*Indices were created on fields - **nconst, primaryProfession** for Collection **nameBasics**.<br>
- *Tabspace* Index was created on field - **tconst** for Collection **titleRating**.<br>
-  *Tabspace*Compound indices were created on fields - **titleType & startyear, titleType & runtimeMinutes** for Collection **titleType**
+ &emsp;Indices were created on fields - **titleType, tconst, parentTconst** for Collection **titleType**.<br>
+ &emsp;Indices were created on fields - **tconst, directors** for Collection **titleCrew**.<br>
+ &emsp;Indices were created on fields - **nconst, primaryProfession** for Collection **nameBasics**.<br>
+ &emsp;Index was created on field - **tconst** for Collection **titleRating**.<br>
+ &emsp;Compound indices were created on fields - **titleType & startyear, titleType & runtimeMinutes** for Collection **titleType**
   
 ### Step 6 - Pipeline Execution
 Pipelines are separated in a field named pipelines.py.<br>
