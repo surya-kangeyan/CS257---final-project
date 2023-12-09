@@ -32,10 +32,10 @@ The update query pipeline is isolated on a separate file named updateQuery.py <b
 #### Collection names to be used while executing pipelines
 
 **titleCrew:**<br>
-Pipeline 1,<br>
 Pipeline 5
 
 **titleBasics:**<br>
+Pipeline 1,<br>
 Pipeline 3,<br>
 Pipeline 4,<br>
 Pipeline 6,<br>
