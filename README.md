@@ -27,7 +27,7 @@ Identified indices for the queries executed in our projects were :<br>
 ### Step 6 - Pipeline Execution
 Pipelines are separated in a field named pipelines.py.<br>
 Changing the pipeline variable name in main.py would help in executing the required pipeline.<br>
-Update query pipeline is isolated on a separate file named updateQuery.py <br>
+The update query pipeline is isolated on a separate file named updateQuery.py <br>
 
 #### Collection names to be used while executing pipelines
 
@@ -44,9 +44,25 @@ Pipeline 8,<br>
 Pipeline 9
 
 # MySql
-All the .sql files are used for setting up the Mysql tables.
-The imdb-create-tables.sql is used to create tables in mysql.
-The imdb-load-data.sql is used to load the tsv files in the schema.
+
+### Step 1: Download and install MySql
+Used Homebrew to install MySql on Mac. Link: https://formulae.brew.sh/formula/mysql.
+
+###Step 2: Prepare Dataset
+The dataset had inconsistencies for instance missing values, incompatible data types, etc. Therefore dataset was preprocessed/cleaned using Python script (imdb-converer.py).
+
+###Step 3: Create Tables
+Created tables using index-create-tables.sql.
+
+###Step 4: Load data to tables
+Populated the tables with the tsv files using imdb-load-data.sql.
+
+###Step 5:Updated and added constraints
+Updated the constraints like primary key, references, and foreign key based on the relationships to be utilized.
+
+##Step 6: Executed Queries
+Executed each query listed in the queries.sql file for the comparative analysis.
+
 
 # Redis
 
@@ -62,7 +78,7 @@ To load data on Redis server, use the command -> _redis-cli -h localhost -p 6379
 
 
 ### Step 3 - Execute Queries
-Each queries are placed in a separate .py file with two/three implementations.
+Each query is placed in a separate .py file with two/three implementations.
 
 ##### Implementation 1 - Python
 Using pure python script, we retrieve the query result from redis server.
@@ -77,7 +93,7 @@ This is the most efficient approach since lua script directly runs on redis serv
 
 
 ### Step 4 - Peformance evaluation
-We used _timeit_ pyhton module to do runtime evaluation around the python functions.<br>
+We used _timeit_ python module to do runtime evaluation around the python functions.<br>
 
 We implemented python and lua script implementations for all the queries.<br>
 For demonstration purposes, we implemented Redis Pieplining in Python for few queries.<br>
