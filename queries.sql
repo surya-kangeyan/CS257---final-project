@@ -62,23 +62,6 @@ WHERE Titles.title_type = 'movie'
 GROUP BY Name_worked_as.profession;
 
 
-
---QUERY 6 EXECUTION TIME
-SET @start_time = CURRENT_TIMESTAMP();
-SELECT Names_.name_ AS Director_Name, AVG(Title_ratings.average_rating) AS Avg_Rating
-FROM Directors
-JOIN Titles ON Directors.title_id = Titles.title_id
-JOIN Title_ratings ON Titles.title_id = Title_ratings.title_id
-JOIN Names_ ON Directors.name_id = Names_.name_id
-WHERE Titles.title_type = 'movie'
-GROUP BY Directors.name_id
-ORDER BY Avg_Rating DESC;
-
-SET @end_time = CURRENT_TIMESTAMP();
-
-SELECT TIMEDIFF(@end_time, @start_time) AS Execution_Time;
-
-
 --QUERY 3 EXECUTION TIME
 SET @start_time = CURRENT_TIMESTAMP();
 SELECT Titles.primary_title AS Movie_Title, Titles.start_year AS Release_Year, Title_genres.genre AS Movie_Genre
@@ -97,7 +80,6 @@ JOIN Title_genres ON Titles.title_id = Title_genres.title_id
 WHERE Titles.start_year = 1970 AND Title_genres.genre = 'Action';
 
 --QUERY 3 EXPLAIN ANALYZE
-EXPLAIN ANALYZE:
 EXPLAIN ANALYZE SELECT Titles.primary_title AS Movie_Title, Titles.start_year AS Release_Year, Title_genres.genre AS Movie_Genre
 FROM Titles
 JOIN Title_genres ON Titles.title_id = Title_genres.title_id
@@ -154,6 +136,21 @@ WHERE Titles.title_type = 'movie' AND Titles.is_adult = 1 AND Title_genres.genre
 GROUP BY Title_genres.genre;
 
 
+--QUERY 6 EXECUTION TIME
+SET @start_time = CURRENT_TIMESTAMP();
+SELECT Names_.name_ AS Director_Name, AVG(Title_ratings.average_rating) AS Avg_Rating
+FROM Directors
+JOIN Titles ON Directors.title_id = Titles.title_id
+JOIN Title_ratings ON Titles.title_id = Title_ratings.title_id
+JOIN Names_ ON Directors.name_id = Names_.name_id
+WHERE Titles.title_type = 'movie'
+GROUP BY Directors.name_id
+ORDER BY Avg_Rating DESC;
+
+SET @end_time = CURRENT_TIMESTAMP();
+
+SELECT TIMEDIFF(@end_time, @start_time) AS Execution_Time;
+
 --QUERY 6 EXPLAIN
 EXPLAIN SELECT Names_.name_ AS Director_Name, AVG(Title_ratings.average_rating) AS Avg_Rating
 FROM Directors
@@ -164,7 +161,7 @@ WHERE Titles.title_type = 'movie'
 GROUP BY Directors.name_id
 ORDER BY Avg_Rating DESC;
 
---QUERY 6 EXPLAIN ANALYZE :
+--QUERY 6 EXPLAIN ANALYZE 
 EXPLAIN ANALYZE SELECT Names_.name_ AS Director_Name, AVG(Title_ratings.average_rating) AS Avg_Rating
 FROM Directors
 JOIN Titles ON Directors.title_id = Titles.title_id
