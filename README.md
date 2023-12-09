@@ -48,19 +48,19 @@ Pipeline 9
 ### Step 1: Download and install MySql
 Used Homebrew to install MySql on Mac. Link: https://formulae.brew.sh/formula/mysql.
 
-###Step 2: Prepare Dataset
+### Step 2: Prepare Dataset
 The dataset had inconsistencies for instance missing values, incompatible data types, etc. Therefore dataset was preprocessed/cleaned using Python script (imdb-converer.py).
 
-###Step 3: Create Tables
+### Step 3: Create Tables
 Created tables using index-create-tables.sql.
 
-###Step 4: Load data to tables
+### Step 4: Load data to tables
 Populated the tables with the tsv files using imdb-load-data.sql.
 
-###Step 5:Updated and added constraints
+### Step 5:Updated and added constraints
 Updated the constraints like primary key, references, and foreign key based on the relationships to be utilized.
 
-##Step 6: Executed Queries
+### Step 6: Executed Queries
 Executed each query listed in the queries.sql file for the comparative analysis(Each query was analyzed using EXPLAIN, EXPLAIN ANALYZE, and TIMEDIFF).
 
 
