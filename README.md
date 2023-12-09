@@ -61,7 +61,7 @@ Populated the tables with the tsv files using imdb-load-data.sql.
 Updated the constraints like primary key, references, and foreign key based on the relationships to be utilized.
 
 ##Step 6: Executed Queries
-Executed each query listed in the queries.sql file for the comparative analysis.
+Executed each query listed in the queries.sql file for the comparative analysis(Each query was analyzed using EXPLAIN, EXPLAIN ANALYZE, and TIMEDIFF).
 
 
 # Redis
@@ -136,4 +136,9 @@ Runtime for the implemented approaches will be printed at the end of each python
 3. Designed implemented and modified python pipelines for the above mentioned queries.
 4. Identified appropriate indices to make query evaluation faster.
 
-### Vrushali - MongoDB module  
+### Vrushali - MySql module 
+1. Worked on the preprocessing dataset, importing, and setting up the system for MySql
+2. Designed the schema structure to better identify the relationship and important attributes of the data
+3. Utilized the structure to implement constraints and indexes to improve the performance of the queries
+4. Analyzed the queries executed in SQL for evaluating execution time, query execution plans, etc.
+ 
